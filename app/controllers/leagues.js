@@ -1,5 +1,5 @@
-var mongoose = require('mongoose'),
-	, async  = require('async'),
+var mongoose = require('mongoose')
+	, async  = require('async')
 	, League = mongoose.model('League')
 	, _      = require('underscore')
 
@@ -17,7 +17,7 @@ exports.show = function (req, res) {
 exports.league = function(req, res, next, id) {
 	var League = mongoose.model('League')
 
-	League.load(id, function (err, league)) {
+	League.load(id, function (err, league) {
 		if (err) return next(err)
 		if (!league) return next(new Error('Failed to load league' + id))
 		req.league = league
