@@ -4,11 +4,10 @@
 	<nflteams></nflteams>
 	<searchlimit></searchlimit>
 	<table>
-		<tr ng-repeat="player in players | filter:search:true | limitTo: limitct">
-			<td>{{ player.pos }}</td>
-			<!-- <td>{{ positions[player.pos].pos }}</td> -->
-			<td>{{ player.num }}</td>
-			<td>{{ player.name }}</td>
+		<tr ng-repeat="player in players | filter:search | filter:strictsearch:true | limitTo:limitct">
+			<td>{{ player.name }}<span ng-show="player.num"> - #{{ player.num }}</span></td>
+      		<td>{{ positions[player.pos].abbr }}</td>
+      		<td>{{ nflteams[player.team].abbr }}</td>
 		</tr>
 	</table>
 </div>
