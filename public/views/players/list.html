@@ -4,7 +4,7 @@
 	<nflteams></nflteams>
 	<searchlimit></searchlimit>
 	<table>
-		<tr ng-repeat="player in players | filter:search | limitTo: limitct">
+		<tr ng-repeat="player in players | filter:search:true | limitTo: limitct">
 			<td>{{ player.pos }}</td>
 			<!-- <td>{{ positions[player.pos].pos }}</td> -->
 			<td>{{ player.num }}</td>
