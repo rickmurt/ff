@@ -10,7 +10,7 @@ window.angular.module('ngff.directives', [])
 			restrict: "E",
 			templateUrl: "views/players/nflteamselect.html"
 		};
-	}
+	})
 	.directive('searchlimit', function() {
 		return {
 			restrict: "E",
